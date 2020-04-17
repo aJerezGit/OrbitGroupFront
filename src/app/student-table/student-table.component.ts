@@ -43,7 +43,7 @@ export class StudentTableComponent implements OnInit {
     console.log(this.ShowModal);
     this.selectedStudent = null;
     setTimeout(() => {
-      window.location.replace('#open-modal');
+      window.location.replace('/student#open-modal');
     }, 0);
   }
 
@@ -51,7 +51,7 @@ export class StudentTableComponent implements OnInit {
     this.selectedStudent = {...student};
     this.ShowModal = true;
     setTimeout(() => {
-      window.location.replace('#open-modal');
+      window.location.replace('/student#open-modal');
     }, 0);
   }
 

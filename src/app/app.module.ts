@@ -6,21 +6,24 @@ import { AppComponent } from './app.component';
 import { StudentTableComponent } from './student-table/student-table.component';
 import { StudentService } from './services/student.service';
 import { StudentDialogComponent } from './student-dialog/student-dialog.component';
-import { RouterModule } from '@angular/router';
-
+import { HomeComponent } from './pages/home/home.component';
+import { StudentComponent } from './pages/student/student.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
     StudentTableComponent,
-    StudentDialogComponent
+    StudentDialogComponent,
+    HomeComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: '', redirectTo: '/', pathMatch: 'full' },
-    ])
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [StudentService],
   bootstrap: [AppComponent]

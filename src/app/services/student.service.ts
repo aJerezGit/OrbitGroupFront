@@ -34,7 +34,7 @@ export class StudentService {
   }
 
   createStudent(student: Student): Observable<Student> {
-    console.log(student);
+    // console.log(student);
     return this.http.post<Student>(this.baseUrl, student).pipe(
       tap(() => {
         this._refreshNeeded$.next();
@@ -43,7 +43,7 @@ export class StudentService {
   }
 
   updateStudent(student: Student): Observable<Student> {
-    console.log(student);
+    // console.log(student);
     return this.http.put<Student>(this.baseUrl, student).pipe(
       tap(() => {
         this._refreshNeeded$.next();
@@ -52,7 +52,7 @@ export class StudentService {
   }
 
   deleteStudent(id: number): Observable<Student> {
-    console.log(id);
+    // console.log(id);
     return this.http.delete<Student>(this.baseUrl + '/' + id).pipe(
       tap(() => {
         this._refreshNeeded$.next();

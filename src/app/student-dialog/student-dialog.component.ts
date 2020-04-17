@@ -35,7 +35,7 @@ export class StudentDialogComponent implements OnInit {
         this.newStudent(studentFormValue);
         // this.router.navigate(['/']);
       }
-      window.location.replace("#");
+      window.location.replace("student/#");
     }
   }
 
